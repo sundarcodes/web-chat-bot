@@ -1,0 +1,21 @@
+[
+  {
+    "id": "builtin_single-choice-7mZm9k",
+    "formData": {
+      "text": "hey, how would you like me to help you today ?",
+      "choices": [
+        {
+          "title": "Client info",
+          "value": "1"
+        },
+        {
+          "title": "Clients with no emails list",
+          "value": "2"
+        }
+      ],
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-09-26T10:29:58.924Z"
+  }
+]

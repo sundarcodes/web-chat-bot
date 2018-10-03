@@ -1,0 +1,96 @@
+[
+  {
+    "id": "builtin_text-pSsHWg",
+    "formData": {
+      "text": "👋, {{state.$r}}!",
+      "variations": [
+        "Hello, {{state.$r}}!",
+        "Welcome to Botpress, {{state.$r}}!"
+      ],
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T00:57:36.026Z"
+  },
+  {
+    "id": "builtin_text-AY5SSW",
+    "formData": {
+      "text": "This is the first time we speak 🤖",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T00:59:51.118Z"
+  },
+  {
+    "id": "builtin_text-bFsOmf",
+    "formData": {
+      "text": "We already spoke {{state.$r}} times!",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:00:37.593Z"
+  },
+  {
+    "id": "builtin_text-TtzrCV",
+    "formData": {
+      "text": "Alright, I have forgotten your name.",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:06:41.963Z"
+  },
+  {
+    "id": "builtin_text-z0J9qh",
+    "formData": {
+      "text": "May I know your name please?",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:08:41.241Z"
+  },
+  {
+    "id": "builtin_text-X069Le",
+    "formData": {
+      "text": "Try saying something like \"forget my name\"!",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:16:53.227Z"
+  },
+  {
+    "id": "builtin_text-kKQ8C3",
+    "formData": {
+      "text": "(To see how this works, double-click anywhere on the flow and go to the \"Transitions\" panel)",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-05-14T01:17:55.317Z"
+  },
+  {
+    "id": "builtin_text-gGujKm",
+    "formData": {
+      "text": "Please tell me the client email or the domain. ",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-09-26T10:36:34.028Z"
+  },
+  {
+    "id": "builtin_text-WXb2pi",
+    "formData": {
+      "text": "Here you go.. The client domain is {{state.clientDetail.domain}}, tech_spend is {{state.clientDetail.tech_spend}}. The plugins are {{state.clientDetail.plugins}}",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-09-26T11:35:20.927Z"
+  },
+  {
+    "id": "builtin_text-rYE4dD",
+    "formData": {
+      "text": "Oops.. I am not able to find information about that client. If you do not mind, could you please check the email or domain again  and try ?",
+      "typing": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2018-09-26T11:41:15.031Z"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "version": "0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "90a488a2cd",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-gGujKm"
+      ],
+      "onReceive": [
+        "searchForClientInfo {\"searchString\":\"{{event.text}}\"}"
+      ],
+      "next": [
+        {
+          "condition": "state.clientDetail === null",
+          "node": "client-detail-cannot-be-fetched"
+        },
+        {
+          "condition": "state.clientDetail != null",
+          "node": "client-detail-fetched"
+        }
+      ]
+    },
+    {
+      "id": "7401f20f90",
+      "name": "client-detail-fetched",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-WXb2pi"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "9a1efa16c3",
+      "name": "client-detail-cannot-be-fetched",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-rYE4dD"
+      ],
+      "onReceive": null
+    }
+  ]
+}

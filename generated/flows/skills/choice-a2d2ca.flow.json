@@ -1,0 +1,84 @@
+{
+  "version": "0.1",
+  "startNode": "entry",
+  "skillData": {
+    "contentId": "builtin_single-choice-7mZm9k",
+    "keywords": {
+      "1": [
+        "1",
+        "Client info"
+      ],
+      "2": [
+        "2",
+        "Clients with no emails list"
+      ]
+    },
+    "config": {}
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-7mZm9k {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "062392",
+      "onReceive": null
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "__skill-choice-parse {\"contentId\":\"builtin_single-choice-7mZm9k\",\"keywords\":{\"1\":[\"1\",\"Client info\"],\"2\":[\"2\",\"Clients with no emails list\"]},\"config\":{}}"
+      ],
+      "next": [
+        {
+          "condition": "state['skill-choice-valid'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "id": "004383",
+      "onEnter": []
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "__skill-choice-invalid-inc"
+      ],
+      "next": [
+        {
+          "condition": "state['skill-choice-invalid-count'] <= 3",
+          "node": "sorry"
+        },
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "271770",
+      "onReceive": null
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_single-choice-7mZm9k {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "082167",
+      "onReceive": null
+    }
+  ]
+}

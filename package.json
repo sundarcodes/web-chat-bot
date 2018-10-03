@@ -1,0 +1,31 @@
+{
+  "name": "vajro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 8 < 11"
+  },
+  "dependencies": {
+    "@botpress/audience": "10.40.0",
+    "@botpress/builtins": "10.40.0",
+    "@botpress/channel-web": "10.40.0",
+    "@botpress/hitl": "10.40.0",
+    "@botpress/nlu": "10.40.0",
+    "@botpress/skill-choice": "10.40.0",
+    "botpress": "10.40.0",
+    "botpress-multi-select": "file:modules/botpress-multi-select",
+    "jsdoc-api": "^4.0.3",
+    "knex": "^0.15.2",
+    "lodash": "^4.17.11",
+    "pg": "^7.4.3",
+    "yn": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "ghost-sync": "botpress ghost-sync",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sundar",
+  "license": "AGPL-3.0-only"
+}

@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": [
+      {
+        "condition": "event.nlu.intent.is('forget')",
+        "node": "forget-my-name"
+      }
+    ]
+  },
+  "startNode": "choice-a2d2ca",
+  "nodes": [
+    {
+      "id": "skill-a2d2ca",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-a2d2ca",
+      "flow": "skills/choice-a2d2ca.flow.json",
+      "next": [
+        {
+          "condition": "state['skill-choice-ret'] == \"1\"",
+          "node": "client-info.flow.json"
+        },
+        {
+          "condition": "state['skill-choice-ret'] == \"2\"",
+          "node": "client-with-no-emails.flow.json"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

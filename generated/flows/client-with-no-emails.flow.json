@@ -1,0 +1,41 @@
+{
+  "version": "0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "f226932100",
+      "name": "entry",
+      "onEnter": [
+        "showListOfPlugins {}"
+      ],
+      "onReceive": [
+        "fetchClientsWithNoEmails {}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "end-confirmation"
+        }
+      ]
+    },
+    {
+      "id": "4bd7878faf",
+      "name": "end-confirmation",
+      "next": [
+        {
+          "condition": "state.isDone",
+          "node": "main.flow.json"
+        },
+        {
+          "condition": "true",
+          "node": "entry"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": [
+        "handleUserChoice {}"
+      ]
+    }
+  ]
+}
