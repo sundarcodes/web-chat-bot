@@ -35,16 +35,31 @@ async function searchForClientInfo(state, event, params) {
 }
 
 async function showListOfPlugins(state, event) {
-  const plugins = _.map(dbService.plugins, (value, key) => ({
-    id: key,
-    name: value
-  }));
-  const dataToBeRendered = {
-    text: 'Please select the plugins list',
-    choices: plugins
-  };
+  // const plugins = _.map(dbService.plugins, (value, key) => ({
+  //   id: key,
+  //   name: value
+  // }));
+  const plugins = [
+    {
+      id: 1,
+      name: 'Cricket'
+    },
+    {
+      id: 2,
+      name: 'Football'
+    },
+    {
+      id: 3,
+      name: 'BasketBall'
+    }
+  ];
+  // const dataToBeRendered = {
+  //   text: 'Please select the plugins list',
+  //   choices: plugins
+  // };
+  console.log(plugins);
   // await event.reply('choice', dataToBeRendered);
-  await event.reply('select', plugins);
+  await event.reply('#select', plugins);
 }
 
 async function fetchClientsWithNoEmails(state, event) {

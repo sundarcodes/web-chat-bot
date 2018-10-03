@@ -12,7 +12,6 @@ module.exports = {
   '#select': data => ({
     text: 'Select option',
     type: 'botpress-multi-select',
-    quick_replies: data.map(choice => `<${choice.id}> ${choice.name}`),
     data: { slots: data }
   })
 };

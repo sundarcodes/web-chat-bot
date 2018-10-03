@@ -9,7 +9,7 @@
       }
     ]
   },
-  "startNode": "choice-a2d2ca",
+  "startNode": "node-0d3c",
   "nodes": [
     {
       "id": "skill-a2d2ca",
@@ -34,6 +34,17 @@
       ],
       "onEnter": null,
       "onReceive": null
+    },
+    {
+      "id": "faa995af91",
+      "name": "node-0d3c",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-L7P~GA"
+      ],
+      "onReceive": [
+        "showListOfPlugins {}"
+      ]
     }
   ]
 }

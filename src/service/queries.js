@@ -19,7 +19,7 @@ initialize = async () => {
   });
 };
 
-initialize().then(() => {});
+// initialize().then(() => {});
 
 const fetchClientDetailsByEmail = async email => {
   return knex('client_with_emails')
