@@ -82,25 +82,25 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var Plugin = exports.Plugin = function Plugin(_ref) {
-  var slots = _ref.slots,
+  var plugins = _ref.plugins,
       id = _ref.id,
       onSendData = _ref.onSendData;
 
-  console.log('Plugin view');
+  console.log("Plugin view", plugins);
   var handleChange = function handleChange(e) {
     onSendData({
-      type: 'text',
-      text: 'Selected ' + e.target.value + ' date-time',
+      type: "text",
+      text: "Selected " + e.target.value + " date-time",
       data: { date: e.target.value, messageId: id }
     });
   };
 
   return React.createElement(
-    'select',
+    "select",
     { onChange: handleChange },
-    (slots || []).map(function (slot, i) {
+    (plugins || []).map(function (slot, i) {
       return React.createElement(
-        'option',
+        "option",
         { value: slot.id, key: slot.id },
         slot.name
       );
@@ -109,17 +109,17 @@ var Plugin = exports.Plugin = function Plugin(_ref) {
 };
 
 var Entry = exports.Entry = function Entry() {
-  console.log('Select initialized');
+  console.log("Select initialized");
   return React.createElement(
-    'div',
+    "div",
     null,
-    'Hello World'
+    "Hello World"
   );
 }; // Could be used for initialization
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   window.botpress = window.botpress || {};
-  window.botpress['multi-select'] = { Plugin: Plugin, Entry: Entry };
+  window.botpress["botpress-multi-select"] = { Plugin: Plugin, Entry: Entry };
 }
 
 /***/ })

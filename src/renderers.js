@@ -11,7 +11,7 @@ module.exports = {
   }),
   '#select': data => ({
     text: 'Select option',
-    type: 'botpress-multi-select',
-    data: { slots: data }
+    type: '@botpress-multi-select',
+    data: { plugins: data.plugins }
   })
 };

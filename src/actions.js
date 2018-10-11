@@ -59,7 +59,7 @@ async function showListOfPlugins(state, event) {
   // };
   console.log(plugins);
   // await event.reply('choice', dataToBeRendered);
-  await event.reply('#select', plugins);
+  await event.reply('#select', { plugins });
 }
 
 async function fetchClientsWithNoEmails(state, event) {

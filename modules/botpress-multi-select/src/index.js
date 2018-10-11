@@ -1,8 +1,8 @@
-export const Plugin = ({ slots, id, onSendData }) => {
-  console.log('Plugin view');
+export const Plugin = ({ plugins, id, onSendData }) => {
+  console.log("Plugin view", plugins);
   const handleChange = e => {
     onSendData({
-      type: 'text',
+      type: "text",
       text: `Selected ${e.target.value} date-time`,
       data: { date: e.target.value, messageId: id }
     });
@@ -10,7 +10,7 @@ export const Plugin = ({ slots, id, onSendData }) => {
 
   return (
     <select onChange={handleChange}>
-      {(slots || []).map((slot, i) => (
+      {(plugins || []).map((slot, i) => (
         <option value={slot.id} key={slot.id}>
           {slot.name}
         </option>
@@ -20,11 +20,11 @@ export const Plugin = ({ slots, id, onSendData }) => {
 };
 
 export const Entry = () => {
-  console.log('Select initialized');
+  console.log("Select initialized");
   return <div>Hello World</div>;
 }; // Could be used for initialization
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   window.botpress = window.botpress || {};
-  window.botpress['botpress-multi-select'] = { Plugin, Entry };
+  window.botpress["botpress-multi-select"] = { Plugin, Entry };
 }
